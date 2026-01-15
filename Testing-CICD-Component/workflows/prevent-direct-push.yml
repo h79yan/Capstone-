@@ -1,0 +1,20 @@
+name: Prevent Direct Push to Protected Branches
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  prevent-direct-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if this is a pull request
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "Direct pushes to main or develop are not allowed :>"
+            exit 1
+          fi
+        shell: bash

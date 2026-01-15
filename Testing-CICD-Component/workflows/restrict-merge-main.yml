@@ -1,0 +1,18 @@
+name: Restrict Merges to Main from Develop Only
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  restrict-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if the PR is from develop
+        run: |
+          if [ "${{ github.head_ref }}" != "develop" ]; then
+            echo "Pull requests to main are only allowed from develop :>"
+            exit 1
+          fi
