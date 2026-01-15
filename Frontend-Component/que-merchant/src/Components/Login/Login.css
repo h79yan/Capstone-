@@ -1,0 +1,93 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-left {
+    flex: 1;
+    background-color: #3b3b3b; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 80% 0, 90% 75%, 0% 100%);
+}          
+
+.login-left h1, .login-left h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.login-left p {
+    font-size: 1.5rem;
+}
+
+.login-right {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #888888;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;  /* Ensure padding is included in the width */
+}
+
+.password-container {
+    position: relative;  /* Relative positioning for the password container */
+    display: flex;      /* Use flex to align the input and button */
+    align-items: center; /* Center vertically */
+}
+
+.password-container input {
+    flex: 1; /* Allow the input to grow and fill the space */
+}
+
+.toggle-password {
+    margin-left: -40px; /* Adjust to bring it inside the input */
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 100%; /* Match height of the input */
+    display: flex; /* Center the text vertically */
+    align-items: center; /* Center vertically */
+    padding: 0 5px; /* Add some horizontal padding */
+}
+
+.login-button {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%; /* Adjust width to 100% for consistency */
+}
+
+.login-button:hover {
+    background-color: #333333;
+}
